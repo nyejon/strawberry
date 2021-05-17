@@ -305,6 +305,7 @@ def field(
     deprecation_reason: Optional[str] = None,
     default: Any = UNSET,
     default_factory: Union[Callable, object] = UNSET,
+    metadata=None,
 ) -> StrawberryField:
     """Annotates a method or property as a GraphQL field.
 
@@ -332,6 +333,7 @@ def field(
         deprecation_reason=deprecation_reason,
         default_value=default,
         default_factory=default_factory,
+        metadata=metadata,
     )
 
     if resolver:
